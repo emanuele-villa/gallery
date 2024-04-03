@@ -11,7 +11,7 @@
 
 # Adjust the next line, if necessary, to reflect the location into
 # which you have installed the products.
-PRODUCTS_DIRECTORY="/eos/user/e/evilla/DUNE/test/localProducts_larsoft_v09_78_01d00_e20_prof/"
+PRODUCTS_DIRECTORY="/afs/cern.ch/work/e/evilla/private/dune/dunesw/verbose-dev/localProducts_larsoft_v09_79_00d02_prof_e26/"
 
 if ! type -p ups
 then
@@ -39,8 +39,8 @@ fi
 # practice, because it is best to diagnose incompatibilities before they cause
 # compilation failures, linkining failures, or runtime failures.
 #
-setup -B dunesw v09_78_01d00 -q +e20:+prof
-setup -B gallery v1_20_02 -q +e20:+prof
+setup -B dunesw v09_79_00d02 -q +e26:+prof
+setup -B gallery v1_20_02 -q +e26:+prof
 
 # The following setup assumes you want the specified version of the
 # larsoftobj distribution bundle. larsoftobj contains all the data
