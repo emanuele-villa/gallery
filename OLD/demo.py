@@ -16,7 +16,12 @@ def provide_get_valid_handle(klass):
         """Make the ROOT C++ jit compiler instantiate the
            Event::getValidHandle member template for template
            parameter klass."""
-        ROOT.gROOT.ProcessLine('template gallery::ValidHandle<%(name)s> gallery::Event::getValidHandle<%(name)s>(art::InputTag const&) const;' % {'name' : klass})
+        # this does not work, dropping the python approach as I don't know how to solve it
+        process = ROOT.gROOT.ProcessLine('template gallery::ValidHandle<%(name)s> gallery::Event::getValidHandle<%(name)s>(art::InputTag const&) const;' % {'name' : klass})
+        print ("Process: ", process)
+        # check that it worked
+        # ROOT.gROOT.ProcessLine('gallery::ValidHandle<%(name)s> (gallery::Event::*dummy)(art::InputTag const&) const = &gallery::Event::getValidHandle<%(name)s>;' % {'name' : klass})
+        
 
 
 # Now for the script...
@@ -28,7 +33,7 @@ print ("Instantiating member templates...")
 provide_get_valid_handle('std::vector<simb::MCTruth>')
 
 print ("Preparing before event loop...")
-mctruths_tag = ROOT.art.InputTag("generator");
+mctruths_tag = ROOT.art.InputTag("generator")
 filenames = ROOT.vector(ROOT.string)(1, sys.argv[1])
 
 # Make histograms before we open the art/ROOT file, or the file ends
@@ -41,6 +46,7 @@ ev = ROOT.gallery.Event(filenames)
 
 # Capture the functions that will get ValidHandles. This avoids some
 # inefficiency in constructing the function objects many times.
+print ("Capturing getValidHandle functions...")
 get_mctruths = ev.getValidHandle(ROOT.vector(ROOT.simb.MCTruth))
 
 print ("Entering event loop...")

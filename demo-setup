@@ -39,7 +39,7 @@ fi
 # practice, because it is best to diagnose incompatibilities before they cause
 # compilation failures, linkining failures, or runtime failures.
 #
-setup -B dunesw v09_79_00d02 -q +e26:+prof
+# setup -B dunesw v09_79_00d02 -q +e26:+prof # doing this in scripts
 setup -B gallery v1_20_02 -q +e26:+prof
 
 # The following setup assumes you want the specified version of the

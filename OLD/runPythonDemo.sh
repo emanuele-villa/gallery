@@ -8,7 +8,7 @@ print_help() {
     echo "Options:"
     echo "  -h, --help: print this help message"
     echo "  -i, --input-file: input artroot file"
-    echo "  [-b], [--build]: build the converter"
+    echo "  [-r], [--run]: run demo.py"
 }
 
 HOME_DIR=$(git rev-parse --show-toplevel)
@@ -48,22 +48,15 @@ if [ -z "$INPUT_FILE" ]; then
     exit 1
 fi
 
-# sourcng all the necessary environment variables
-source source-env.sh
-
-
-# compile the code
-if [ "$BUILD" ]; then
-    echo "Building the converter..."
-    mkdir -p build
-    cd $HOME_DIR/build
-    cmake -DCMAKE_C_COMPILER=$(which gcc) -DCMAKE_CXX_COMPILER=$(which g++) -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-    make
-    cd ..
-fi
-
+# source ups products and larsoft version, considering the setup of gallery
+source /afs/cern.ch/work/e/evilla/private/dune/dunesw/source-dune.sh
+source $HOME_DIR/demo-setup
 
 # run the converter
-# ./myconverter $INPUT_FILE
+cd $HOME_DIR
+
+echo " "
+echo "Running demo.py..."
+python demo.py $INPUT_FILE
 
 cd $CURRENT_DIR; # go back to the original directory
