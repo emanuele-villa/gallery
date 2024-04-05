@@ -1,10 +1,12 @@
 import os, sys
 import ROOT
 
-print "Starting demo..."
+from utils import *
+
+print ("Starting demo...")
 
 if (len(sys.argv) < 2):
-	print "Please specify an art/ROOT file to read"
+	print ("Please specify an art/ROOT file to read")
 	sys.exit(1)
 
 # Some functions that I find useful to reduce error-prone typing.
@@ -16,19 +18,24 @@ def provide_get_valid_handle(klass):
         """Make the ROOT C++ jit compiler instantiate the
            Event::getValidHandle member template for template
            parameter klass."""
-        ROOT.gROOT.ProcessLine('template gallery::ValidHandle<%(name)s> gallery::Event::getValidHandle<%(name)s>(art::InputTag const&) const;' % {'name' : klass})
+        # this does not work, dropping the python approach as I don't know how to solve it
+        process = ROOT.gROOT.ProcessLine('template gallery::ValidHandle<%(name)s> gallery::Event::getValidHandle<%(name)s>(art::InputTag const&) const;' % {'name' : klass})
+        print ("Process: ", process)
+        # check that it worked
+        # ROOT.gROOT.ProcessLine('gallery::ValidHandle<%(name)s> (gallery::Event::*dummy)(art::InputTag const&) const = &gallery::Event::getValidHandle<%(name)s>;' % {'name' : klass})
+        
 
 
 # Now for the script...
 
-print "Reading headers..."
+print ("Reading headers...")
 read_header('gallery/ValidHandle.h')
 
-print "Instantiating member templates..."
+print ("Instantiating member templates...")
 provide_get_valid_handle('std::vector<simb::MCTruth>')
 
-print "Preparing before event loop..."
-mctruths_tag = ROOT.art.InputTag("generator");
+print ("Preparing before event loop...")
+mctruths_tag = ROOT.art.InputTag("generator")
 filenames = ROOT.vector(ROOT.string)(1, sys.argv[1])
 
 # Make histograms before we open the art/ROOT file, or the file ends
@@ -36,14 +43,15 @@ filenames = ROOT.vector(ROOT.string)(1, sys.argv[1])
 histfile = ROOT.TFile("hist.root", "RECREATE")
 npart_hist = ROOT.TH1F("npart", "Number of particles per MCTruth", 51, -0.5, 50.5)
 
-print "Creating event object ..."
+print ("Creating event object ...")
 ev = ROOT.gallery.Event(filenames)
 
 # Capture the functions that will get ValidHandles. This avoids some
 # inefficiency in constructing the function objects many times.
+print ("Capturing getValidHandle functions...")
 get_mctruths = ev.getValidHandle(ROOT.vector(ROOT.simb.MCTruth))
 
-print "Entering event loop..."
+print ("Entering event loop...")
 while (not ev.atEnd()) :
         mctruths = get_mctruths(mctruths_tag)
         if (not mctruths.empty()):
@@ -54,5 +62,5 @@ while (not ev.atEnd()) :
         # object model.
         ev.next()
 
-print "Writing histograms..."
+print ("Writing histograms...")
 histfile.Write()

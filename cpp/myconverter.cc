@@ -11,7 +11,7 @@
 #include "TH1F.h"
 #include "TH2F.h"
 
-// #include "analyze.hh"
+#include "analyze.hh"
 
 // Since this is a main program, not a header, the using-directives
 // below aren't bad practice; they allow us to make the code a bit
@@ -41,6 +41,11 @@ main(int argc, char** argv) try {
   // as are used in art modules. The string specified is the label of
   // the module the produced the product in question.
 
+  InputTag const mctruths_tag("generator");
+  InputTag const vertices_tag("linecluster");
+
+
+  // ROOT indicates a problem with construction by setting the 'zombie
   // bit', and so we'll be careful to test that -- so as not to cause
   // a confusing problem later on if some contructor fails.
   TFile histfile("histfile.root", "RECREATE");
@@ -50,6 +55,30 @@ main(int argc, char** argv) try {
   }
 
   // These are the histograms we will be filling.
+  TH1F nparticles_hist(
+    "nparticles", "Number of particles per MCTruth", 50, 500.5, 1500.5);
+  TH1F xhist("vertex_x", "x location of vertex", 50, -400., 400.);
+  TH1F yhist("vertex_y", "y location of vertex", 50, -600., 600.);
+  TH1F zhist("vertex_z", "z location of vertex", 50, 0., 1400.);
+  TH2F xyhist(
+    "vertex_xy", "x vs. y for each vertex", 20, -400., 400., 20, -600., 600.);
+
+  TH2F nclus_vs_adc_sum("nclus_vs_adc_sum",
+                        "number of clusters vs. ADC sum",
+                        30,
+                        0.,
+                        30.,
+                        20,
+                        4000.,
+                        140000.);
+  TH2F adc_vs_summed_integrals("adc_vs_summed_integrals",
+                               "cluster ADC vs sum of hit integrals",
+                               20,
+                               0.,
+                               6000.,
+                               20,
+                               0.,
+                               6000.);
 
   // The gallery::Event object acts as a cursor into the stream of
   // events.  A newly-constructed gallery::Event is at the start if
@@ -64,10 +93,6 @@ main(int argc, char** argv) try {
     auto const t0 = system_clock::now();
     analyze_mctruths(ev, mctruths_tag, nparticles_hist);
     analyze_vertices(ev, vertices_tag, xhist, yhist, zhist, xyhist);
-    analyze_vertex_cluster_correlations(
-      ev, vertices_tag, vertex_cluster_assns, nclus_vs_adc_sum);
-    analyze_cluster_hit_correlations(
-      ev, clusters_tag, cluster_hit_assns, adc_vs_summed_integrals);
     times.push_back(duration_cast<microseconds>(system_clock::now() - t0));
   }
 
