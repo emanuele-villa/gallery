@@ -58,6 +58,7 @@ source source-env.sh
 
 # run the converter
 cd $HOME_DIR
-command_to_run="python jake-python.py -i $INPUT_FILE --tag marley"
+command_to_run="python tps-MCtruth-converter.py -i $INPUT_FILE --tag marley"
 echo "Running command: $command_to_run"
+$command_to_run
 cd $CURRENT_DIR; # go back to the original directory

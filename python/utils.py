@@ -9,8 +9,7 @@ def provide_get_valid_handle(klass):
     """Make the ROOT C++ jit compiler instantiate the
          Event::getValidHandle member template for template
          parameter klass."""
-    process = RT.gROOT.ProcessLine('template gallery::ValidHandle<%(name)s> gallery::Event::getValidHandle<%(name)s>(art::InputTag const&) const;' % {'name' : klass})
-    print ("Process: ", process)
+    RT.gROOT.ProcessLine('template gallery::ValidHandle<%(name)s> gallery::Event::getValidHandle<%(name)s>(art::InputTag const&) const;' % {'name' : klass})
 
 
 def provide_list(classes):
