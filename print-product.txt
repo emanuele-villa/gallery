@@ -1,0 +1,168 @@
+%MSG-i MF_INIT_OK:  Early 28-Sep-2023 10:19:21 CDT JobSetup
+Messagelogger initialization complete.
+%MSG
+28-Sep-2023 10:19:22 CDT  Initiating request to open input file "/dune/data/users/emvilla/hckgen_nuccrbkg_g4_reco1.root"
+%MSG-i Root_Information:  FileDumperOutput:out1@Construction TClass::Init()  28-Sep-2023 10:19:23 CDT ModuleConstruction
+no dictionary for class sim::IDE is available
+ROOT severity: 2000
+%MSG
+28-Sep-2023 10:19:24 CDT  Opened input file "/dune/data/users/emvilla/hckgen_nuccrbkg_g4_reco1.root"
+Begin processing the 1st record. run: 10001001 subRun: 0 event: 1 at 28-Sep-2023 10:19:24 CDT
+PRINCIPAL TYPE: Event
+PROCESS NAME | MODULE LABEL............... | PRODUCT INSTANCE NAME................ | DATA PRODUCT TYPE.................................................... | .SIZE
+MARLEYGen... | Ar42GenInLAr............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | NeutronGenInRock........... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | U238ChainGenInAPA.......... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPo218GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Co60GenInAPA............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb210GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Ar39GenInLAr............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb214GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPo218GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb214GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb210GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | K40GenInCPA................ | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+MARLEYGen... | Rn222ChainBi214GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainBi214GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainFromBi210GenInCPA | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Kr85GenInLAr............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | U238ChainGenInCPA.......... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | rns........................ | ..................................... | std::vector<art::RNGsnapshot>........................................ | ...21
+MARLEYGen... | Rn222ChainRn222GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | K42From42ArGenInCPA........ | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainGenInPDS......... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | K42From42ArGenInLAr........ | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | marley..................... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCInner...... | std::vector<sim::SimEnergyDeposit>................................... | .1238
+SupernovaG4. | PDFastSim.................. | Reflected............................ | std::vector<sim::OpDetBacktrackerRecord>............................. | ..160
+SupernovaG4. | PDFastSim.................. | ..................................... | std::vector<sim::SimPhotonsLite>..................................... | ..160
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCPlaneVInner | std::vector<sim::SimEnergyDeposit>................................... | ...66
+SupernovaG4. | rns........................ | ..................................... | std::vector<art::RNGsnapshot>........................................ | ....5
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCActiveOuter | std::vector<sim::SimEnergyDeposit>................................... | ....0
+SupernovaG4. | largeant................... | ..................................... | sim::ParticleAncestryMap............................................. | ....-
+SupernovaG4. | largeant................... | ..................................... | std::vector<simb::MCParticle>........................................ | .8221
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCPlaneUInner | std::vector<sim::SimEnergyDeposit>................................... | ....3
+SupernovaG4. | elecDrift.................. | ..................................... | std::vector<sim::SimChannel>......................................... | .9002
+SupernovaG4. | PDFastSim.................. | Reflected............................ | std::vector<sim::SimPhotonsLite>..................................... | ..160
+SupernovaG4. | PDFastSim.................. | ..................................... | std::vector<sim::OpDetBacktrackerRecord>............................. | ..160
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCPlaneZInner | std::vector<sim::SimEnergyDeposit>................................... | ...50
+SupernovaG4. | largeant................... | ..................................... | art::Assns<simb::MCTruth,simb::MCParticle,sim::GeneratedParticleInfo> | .8221
+SupernovaG4. | IonAndScint................ | ..................................... | std::vector<sim::SimEnergyDeposit>................................... | 40911
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCActiveInner | std::vector<sim::SimEnergyDeposit>................................... | 39554
+SupernovaG4. | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+detsim...... | opdigi..................... | ..................................... | std::vector<sim::OpDetDivRec>........................................ | ..320
+detsim...... | tpcrawdecoder.............. | simpleSC............................. | std::vector<sim::SimChannel>......................................... | 10240
+detsim...... | tpcrawdecoder.............. | daq.................................. | std::vector<raw::RawDigit>........................................... | 10240
+detsim...... | rns........................ | ..................................... | std::vector<art::RNGsnapshot>........................................ | ....1
+detsim...... | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+detsim...... | opdigi..................... | ..................................... | std::vector<raw::OpDetWaveform>...................................... | 14780
+Reco1....... | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+Reco1....... | trigprim................... | ..................................... | std::vector<recob::Hit>.............................................. | .1063
+Reco1....... | trigprim................... | ..................................... | art::Assns<raw::RawDigit,recob::Hit,void>............................ | .1063
+
+Total products (present, not present): 50 (50, 0).
+
+Begin processing the 2nd record. run: 10001001 subRun: 0 event: 2 at 28-Sep-2023 10:19:25 CDT
+PRINCIPAL TYPE: Event
+PROCESS NAME | MODULE LABEL............... | PRODUCT INSTANCE NAME................ | DATA PRODUCT TYPE.................................................... | .SIZE
+MARLEYGen... | Ar42GenInLAr............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | NeutronGenInRock........... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | U238ChainGenInAPA.......... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPo218GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Co60GenInAPA............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb210GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Ar39GenInLAr............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb214GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPo218GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb214GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainPb210GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | K40GenInCPA................ | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+MARLEYGen... | Rn222ChainBi214GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainBi214GenInCPA.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainFromBi210GenInCPA | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Kr85GenInLAr............... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | U238ChainGenInCPA.......... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | rns........................ | ..................................... | std::vector<art::RNGsnapshot>........................................ | ...21
+MARLEYGen... | Rn222ChainRn222GenInLAr.... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | K42From42ArGenInCPA........ | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | Rn222ChainGenInPDS......... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | K42From42ArGenInLAr........ | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+MARLEYGen... | marley..................... | ..................................... | std::vector<simb::MCTruth>........................................... | ....1
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCInner...... | std::vector<sim::SimEnergyDeposit>................................... | .1138
+SupernovaG4. | PDFastSim.................. | Reflected............................ | std::vector<sim::OpDetBacktrackerRecord>............................. | ..160
+SupernovaG4. | PDFastSim.................. | ..................................... | std::vector<sim::SimPhotonsLite>..................................... | ..160
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCPlaneVInner | std::vector<sim::SimEnergyDeposit>................................... | ....0
+SupernovaG4. | rns........................ | ..................................... | std::vector<art::RNGsnapshot>........................................ | ....5
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCActiveOuter | std::vector<sim::SimEnergyDeposit>................................... | ....0
+SupernovaG4. | largeant................... | ..................................... | sim::ParticleAncestryMap............................................. | ....-
+SupernovaG4. | largeant................... | ..................................... | std::vector<simb::MCParticle>........................................ | .8094
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCPlaneUInner | std::vector<sim::SimEnergyDeposit>................................... | ....0
+SupernovaG4. | elecDrift.................. | ..................................... | std::vector<sim::SimChannel>......................................... | .8989
+SupernovaG4. | PDFastSim.................. | Reflected............................ | std::vector<sim::SimPhotonsLite>..................................... | ..160
+SupernovaG4. | PDFastSim.................. | ..................................... | std::vector<sim::OpDetBacktrackerRecord>............................. | ..160
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCPlaneZInner | std::vector<sim::SimEnergyDeposit>................................... | ....0
+SupernovaG4. | largeant................... | ..................................... | art::Assns<simb::MCTruth,simb::MCParticle,sim::GeneratedParticleInfo> | .8094
+SupernovaG4. | IonAndScint................ | ..................................... | std::vector<sim::SimEnergyDeposit>................................... | 41120
+SupernovaG4. | largeant................... | LArG4DetectorServicevolTPCActiveInner | std::vector<sim::SimEnergyDeposit>................................... | 39982
+SupernovaG4. | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+detsim...... | opdigi..................... | ..................................... | std::vector<sim::OpDetDivRec>........................................ | ..320
+detsim...... | tpcrawdecoder.............. | simpleSC............................. | std::vector<sim::SimChannel>......................................... | 10240
+detsim...... | tpcrawdecoder.............. | daq.................................. | std::vector<raw::RawDigit>........................................... | 10240
+detsim...... | rns........................ | ..................................... | std::vector<art::RNGsnapshot>........................................ | ....1
+detsim...... | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+detsim...... | opdigi..................... | ..................................... | std::vector<raw::OpDetWaveform>...................................... | 14633
+Reco1....... | TriggerResults............. | ..................................... | art::TriggerResults.................................................. | ....1
+Reco1....... | trigprim................... | ..................................... | std::vector<recob::Hit>.............................................. | .1095
+Reco1....... | trigprim................... | ..................................... | art::Assns<raw::RawDigit,recob::Hit,void>............................ | .1095
+
+Total products (present, not present): 50 (50, 0).
+
+PRINCIPAL TYPE: Run
+PROCESS NAME | MODULE LABEL............... | PRODUCT INSTANCE NAME | DATA PRODUCT TYPE................. | SIZE
+MARLEYGen... | Ar42GenInLAr............... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainBi214GenInCPA.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | GeometryConfigurationWriter | ..................... | sumdata::GeometryConfigurationInfo | ...-
+MARLEYGen... | K40GenInCPA................ | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainFromBi210GenInCPA | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainBi214GenInLAr.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Ar39GenInLAr............... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Co60GenInAPA............... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainPo218GenInCPA.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainPb214GenInCPA.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainPb210GenInLAr.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainPo218GenInLAr.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainPb210GenInCPA.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainPb214GenInLAr.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | U238ChainGenInAPA.......... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | marley..................... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | NeutronGenInRock........... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Kr85GenInLAr............... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainGenInPDS......... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | Rn222ChainRn222GenInLAr.... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | K42From42ArGenInLAr........ | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | U238ChainGenInCPA.......... | ..................... | sumdata::RunData.................. | ...-
+MARLEYGen... | K42From42ArGenInCPA........ | ..................... | sumdata::RunData.................. | ...-
+SupernovaG4. | GeometryConfigurationWriter | ..................... | sumdata::GeometryConfigurationInfo | ...-
+detsim...... | GeometryConfigurationWriter | ..................... | sumdata::GeometryConfigurationInfo | ...-
+Reco1....... | GeometryConfigurationWriter | ..................... | sumdata::GeometryConfigurationInfo | ...-
+
+Total products (present, not present): 26 (26, 0).
+
+28-Sep-2023 10:19:27 CDT  Closed input file "/dune/data/users/emvilla/hckgen_nuccrbkg_g4_reco1.root"
+
+TrigReport ---------- Event summary -------------
+TrigReport Events total = 2 passed = 2 failed = 0
+
+TrigReport ---------- Modules in End-path ----------
+TrigReport        Run    Success      Error Name
+TrigReport          2          2          0 out1
+
+TimeReport ---------- Time summary [sec] -------
+TimeReport CPU = 2.806856 Real = 2.853681
+
+MemReport  ---------- Memory summary [base-10 MB] ------
+MemReport  VmPeak = 1251.84 VmHWM = 668.811
+
+Art has completed and will exit with status 0.

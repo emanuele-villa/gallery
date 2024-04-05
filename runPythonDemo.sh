@@ -49,14 +49,18 @@ if [ -z "$INPUT_FILE" ]; then
 fi
 
 # source ups products and larsoft version, considering the setup of gallery
-source /afs/cern.ch/work/e/evilla/private/dune/dunesw/source-dune.sh
-source $HOME_DIR/demo-setup
+source source-env.sh
 
 # run the converter
 cd $HOME_DIR
 
 echo " "
-echo "Running demo.py..."
-python demo.py $INPUT_FILE
+# echo "Running python-demo.py..."
+# python python-demo.py $INPUT_FILE
+# exporting the matplotlib path
+# export PYTHONPATH=/afs/cern.ch/user/e/evilla/private/matplotlib/lib/python3.10/site-packages/:$PYTHONPATH
+
+echo "Running jake-python.py..."
+python jake-python.py -i $INPUT_FILE
 
 cd $CURRENT_DIR; # go back to the original directory

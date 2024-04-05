@@ -1,6 +1,8 @@
 import os, sys
 import ROOT
 
+from utils import *
+
 print ("Starting demo...")
 
 if (len(sys.argv) < 2):
