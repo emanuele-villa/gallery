@@ -17,7 +17,7 @@ args = parser.parse_args()
 
 read_header('gallery/ValidHandle.h')
 marleydata = 'std::vector<simb::MCTruth>'
-marleydata = 'std::vector<dunedaq::trgdataformats::TriggerPrimitive>'
+# marleydata = 'std::vector<dunedaq::trgdataformats::TriggerPrimitive>'
 classes = [marleydata]
 provide_list(classes)
 
