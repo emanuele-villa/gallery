@@ -5,7 +5,7 @@ import numpy as np
 import math
 from argparse import ArgumentParser as ap
 
-from utils import read_header, provide_list#, provide_get_valid_handle # no need to call it here
+from python.utils import read_header, provide_list#, provide_get_valid_handle # no need to call it here
 # plt.ion()
 
 parser = ap()

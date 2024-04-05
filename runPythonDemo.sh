@@ -1,19 +1,19 @@
 #!/bin/bash
 
-# Script to compile and execute rapidly the converter to flat root
-
+# Script to run the python code to convert the artroot file to a root file
 
 print_help() {
     echo "Usage: ./compileAndConvert.sh [options]"
     echo "Options:"
     echo "  -h, --help: print this help message"
     echo "  -i, --input-file: input artroot file"
-    echo "  [-r], [--run]: run demo.py"
+    echo " --tag: tag to be used in the output file. Default is marley"
 }
 
 HOME_DIR=$(git rev-parse --show-toplevel)
 CURRENT_DIR=$(pwd)
 BUILD=false
+tag="marley"
 INPUT_FILE=""
 
 # parse the arguments
@@ -33,6 +33,11 @@ while [[ $# -gt 0 ]]; do
             BUILD=true
             shift
             ;;
+        --tag)
+            tag="$2"
+            shift
+            shift
+            ;;
         *)
             echo "Unknown option: $1"
             print_help
@@ -48,19 +53,11 @@ if [ -z "$INPUT_FILE" ]; then
     exit 1
 fi
 
-# source ups products and larsoft version, considering the setup of gallery
+# source ups products and dunesw version
 source source-env.sh
 
 # run the converter
 cd $HOME_DIR
-
-echo " "
-# echo "Running python-demo.py..."
-# python python-demo.py $INPUT_FILE
-# exporting the matplotlib path
-# export PYTHONPATH=/afs/cern.ch/user/e/evilla/private/matplotlib/lib/python3.10/site-packages/:$PYTHONPATH
-
-echo "Running jake-python.py..."
-python jake-python.py -i $INPUT_FILE
-
+command_to_run="python jake-python.py -i $INPUT_FILE --tag marley"
+echo "Running command: $command_to_run"
 cd $CURRENT_DIR; # go back to the original directory
