@@ -5,6 +5,7 @@ import numpy as np
 import math
 from argparse import ArgumentParser as ap
 
+# os.append.path(python/utils.py)
 from python.utils import read_header, provide_list#, provide_get_valid_handle # no need to call it here
 # plt.ion()
 
@@ -16,6 +17,7 @@ args = parser.parse_args()
 
 read_header('gallery/ValidHandle.h')
 marleydata = 'std::vector<simb::MCTruth>'
+marleydata = 'std::vector<dunedaq::trgdataformats::TriggerPrimitive>'
 classes = [marleydata]
 provide_list(classes)
 
